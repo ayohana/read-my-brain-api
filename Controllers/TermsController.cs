@@ -53,19 +53,34 @@ namespace ReadMyBrainAPI.Controllers
 
     // // POST /api/translate
     [HttpPost("translate")]
-    public ActionResult<Array> Post([FromBody] string input)
+    public ActionResult<string> Post([FromBody] string input)
     {
       string[] words = input.Split(" ");
-      for (int i = 0; i < words.Length; i++) {
+      for (int i = 0; i < words.Length; i++) 
+      {
+        string wordToSearch = words[i];
+        string endSpecialChar = "";
+        if (words[i].EndsWith(",")) 
+        {
+          endSpecialChar = ",";
+          wordToSearch = wordToSearch.Substring(0, wordToSearch.IndexOf(endSpecialChar));
+        } 
+        else if (words[i].EndsWith("."))
+        {
+          endSpecialChar = ".";
+          wordToSearch = wordToSearch.Substring(0, wordToSearch.IndexOf(endSpecialChar));
+        }
         var query = _db.Terms.AsQueryable();
-        query = query.Where(term => term.Name.Equals(words[i]));
+        query = query.Where(term => term.Name.Equals(wordToSearch));
         foreach (var term in query.ToList()) {
-          if (term.Name == words[i]) {
-            words[i] = term.Definition;
+          if (term.Name == wordToSearch) 
+          {
+            words[i] = term.Definition + endSpecialChar;
           }
         }
       }
-      return words;
+      string translatedInput = string.Join(" ", words);
+      return translatedInput;
     }
 
     // PUT /api/5
