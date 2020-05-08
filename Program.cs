@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace read_my_brain_api
+namespace ReadMyBrainAPI
 {
     public class Program
     {

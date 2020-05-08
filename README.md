@@ -114,7 +114,11 @@ _Coming up soon!_
 
 ## Screenshots
 
-_Coming up soon!_
+API Database Structure:
+
+![Read My Brain API's Database Structure](./Images/read-my-brain-api-database-structure.png/)
+
+_More coming up soon!_
 
 <!-- View all tenants in Postman:
 
