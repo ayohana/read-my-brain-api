@@ -48,17 +48,17 @@ Users are primarily going to be **future health providers**, including nursing s
 <details>
   <summary>See what's under construction!</summary>
 
-  * Design the database structure using Draw.io.
-  * Build a back-end API using C#/.NET Core and MySQL with READ functionality.
-    * Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
-  * Build a front-end JavaScript/React application that allows users to enter a sentence and display the translated sentence.
-    * The default view will be a form with a single text box and a submit button.
-    * The user will be able to enter a sentence into the text box and submit it.
-    * There will be a maximum number of 50 characters in a sentence.
-    * Upon submission, the application will call the API to read the sentence.
-    * The application will display the returned API response as a string.
-  * Deploy the back-end API via Azure.
-  * Deploy the front-end application via Firebase.
+  - [x] Design the database structure using Draw.io.
+  - [ ] Build a back-end API using C#/.NET Core and MySQL with READ functionality.
+      - [ ] Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
+  - [ ] Build a front-end JavaScript/React application that allows users to enter a sentence and display the translated sentence.
+      - [ ] The default view will be a form with a single text box and a submit button.
+      - [ ] The user will be able to enter a sentence into the text box and submit it.
+      - [ ] There will be a maximum number of 50 characters in a sentence.
+      - [ ] Upon submission, the application will call the API to read the sentence.
+      - [ ] The application will display the returned API response as a string.
+  - [ ] Deploy the back-end API via Azure.
+  - [ ] Deploy the front-end application via Firebase.
 
 </details>
 
@@ -116,7 +116,7 @@ _Coming up soon!_
 
 API Database Structure:
 
-![Read My Brain API's Database Structure](./Images/read-my-brain-api-database-structure.png/)
+![Read My Brain API's Database Structure created using Draw.io](./Images/read-my-brain-api-database-structure.png/)
 
 _More coming up soon!_
 
@@ -159,6 +159,8 @@ Remove a tenant:
   * [Tenant API: A successful Test Project for deploying SQL database and .NET app using Azure App Service](https://github.com/ayohana/TenantAPI.git)
   * [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
   * [Install Azure CLI on Windows](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest#install-or-update)
+* [Tutorial: Building an API](https://www.learnhowtoprogram.com/c-and-net/building-an-api)
+* [.NET ICollection<T> Methods for Querying](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1?redirectedfrom=MSDN&view=netframework-4.8#methods)
 
 ## Contact and Support
 
