@@ -45,20 +45,28 @@ namespace ReadMyBrainAPI.Controllers
 
     // POST api/terms
     [HttpPost]
-    public void Post([FromBody] string value)
+    public void Post([FromBody] Term term)
     {
+      _db.Terms.Add(term);
+      _db.SaveChanges();
     }
 
     // PUT api/terms/5
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
+    public void Put(int id, [FromBody] Term term)
     {
+      term.TermID = id;
+      _db.Entry(term).State = EntityState.Modified;
+      _db.SaveChanges();
     }
 
     // DELETE api/terms/5
     [HttpDelete("{id}")]
     public void Delete(int id)
     {
+      var termToDelete = _db.Terms.FirstOrDefault(term => term.TermID == id);
+      _db.Terms.Remove(termToDelete);
+      _db.SaveChanges();
     }
   }
 }
