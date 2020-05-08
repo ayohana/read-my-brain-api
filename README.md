@@ -38,7 +38,7 @@ For this project, I will be referring to nursing 'brain' sheets--or in the nursi
 
 ## Whose Brain
 
-Users are primarily going to be **future health providers**, including nursing students and new nurses. Inspired by my own nursing experince, listed below are my **goals** for this project:
+Users are primarily going to be **future health providers**, including nursing students and new nurses. Inspired by my own nursing experience, listed below are my **goals** for this project:
 1. To help future caregivers understand medical charts quicker, better, easier and make their learning less stressful.
 2. To enable nursing students and new nurses keep up with their preceptors' brains.
 3. To empower future nurses via Read My Brain.
@@ -49,8 +49,8 @@ Users are primarily going to be **future health providers**, including nursing s
   <summary>See what's under construction!</summary>
 
   - [x] Design the database structure using Draw.io.
-  - [ ] Build a back-end API using C#/.NET Core and MySQL with READ functionality.
-      - [ ] Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
+  - [x] Build a back-end API using C#/.NET Core and MySQL with READ functionality.
+      - [x] Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
   - [ ] Build a front-end JavaScript/React application that allows users to enter a sentence and display the translated sentence.
       - [ ] The default view will be a form with a single text box and a submit button.
       - [ ] The user will be able to enter a sentence into the text box and submit it.
@@ -67,12 +67,12 @@ Users are primarily going to be **future health providers**, including nursing s
 <details>
   <summary>Expand to see stretch goals!</summary>
 
-  - [ ] Build a back-end API using C#/.NET Core and MySQL with full CRUD functionality.
+  - [x] Build a back-end API using C#/.NET Core and MySQL with full CRUD functionality.
       - [x] Create a new term and its abbreviation into the API's database.
-      - [ ] Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
+      - [x] Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
       - [x] Update details of an term.
       - [x] Delete an term.
-  - [ ] Enable querying special characters.
+  - [x] Enable querying special characters. For instance, c̅ for with, ā for before and p̄ for after.
   - [ ] Use Quill's basic text editor for application UI.
   - [ ] Apply Quill's toolbar.
   - [ ] Modify Quill's toolbar by adding an option to insert special characters into user input. For instance, c̅ for with, ā for before and p̄ for after.
