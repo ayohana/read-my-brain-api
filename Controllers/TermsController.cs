@@ -8,7 +8,7 @@ using ReadMyBrainAPI.Models;
 
 namespace ReadMyBrainAPI.Controllers
 {
-  [Route("api/terms")]
+  [Route("api")]
   [ApiController]
   public class TermsController : ControllerBase
   {
@@ -20,7 +20,7 @@ namespace ReadMyBrainAPI.Controllers
       _db = db;
     }
 
-    // GET api/terms
+    // GET /api
     [HttpGet]
     public ActionResult<IEnumerable<Term>> Get(string name, string definition)
     {
@@ -36,14 +36,14 @@ namespace ReadMyBrainAPI.Controllers
       return query.ToList();
     }
 
-    // GET api/terms/5
+    // GET /api
     [HttpGet("{id}")]
     public ActionResult<Term> Get(int id)
     {
       return _db.Terms.FirstOrDefault(term => term.TermID == id);
     }
 
-    // POST api/terms
+    // POST /api
     [HttpPost]
     public void Post([FromBody] Term term)
     {
@@ -51,7 +51,24 @@ namespace ReadMyBrainAPI.Controllers
       _db.SaveChanges();
     }
 
-    // PUT api/terms/5
+    // // POST /api/translate
+    [HttpPost("translate")]
+    public ActionResult<Array> Post([FromBody] string input)
+    {
+      string[] words = input.Split(" ");
+      for (int i = 0; i < words.Length; i++) {
+        var query = _db.Terms.AsQueryable();
+        query = query.Where(term => term.Name.Equals(words[i]));
+        foreach (var term in query.ToList()) {
+          if (term.Name == words[i]) {
+            words[i] = term.Definition;
+          }
+        }
+      }
+      return words;
+    }
+
+    // PUT /api/5
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] Term term)
     {
@@ -60,7 +77,7 @@ namespace ReadMyBrainAPI.Controllers
       _db.SaveChanges();
     }
 
-    // DELETE api/terms/5
+    // DELETE /api/5
     [HttpDelete("{id}")]
     public void Delete(int id)
     {

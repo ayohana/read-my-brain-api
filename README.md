@@ -67,29 +67,29 @@ Users are primarily going to be **future health providers**, including nursing s
 <details>
   <summary>Expand to see stretch goals!</summary>
 
-  * Build a back-end API using C#/.NET Core and MySQL with full CRUD functionality.
-    * Create a new term and its abbreviation into the API's database.
-    * Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
-    * Update details of an term.
-    * Delete an term.
-  * Enable querying special characters.
-  * Use Quill's basic text editor for application UI.
-  * Apply Quill's toolbar.
-  * Modify Quill's toolbar by adding an option to insert special characters into user input. For instance, c̅ for with, ā for before and p̄ for after.
-  * Users can enter longer sentences (max 200 characters per sentence).
-  * Users can enter a paragraph (max 1000 characters).
-  * There's an unlimited number of characters a user can enter.
-  * Add an "About" section to the front end.
-  * Add a footer to the front end with a link to my GitHub repo.
-  * Add functionality to generate random sentences in the front end so that users can test/use the app right away.
-  * Users can copy the translated result with a click of a button.
-  * Users can add a new term via the front-end application for open contribution.
-  * Users can update existing terms via the front-end application.
-  * Warn users to be careful when translating real patient information to prevent violating their privacy (HIPAA).
-  * The API can translate the vice versa (from layman’s terms to nursing jargons).
-  * The API can translate live/real-time.
-  * Apply Swagger API for http routes documentation.
-  * Use Redux in case the application's scale of state gets very large.
+  - [ ] Build a back-end API using C#/.NET Core and MySQL with full CRUD functionality.
+      - [x] Create a new term and its abbreviation into the API's database.
+      - [ ] Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
+      - [x] Update details of an term.
+      - [x] Delete an term.
+  - [ ] Enable querying special characters.
+  - [ ] Use Quill's basic text editor for application UI.
+  - [ ] Apply Quill's toolbar.
+  - [ ] Modify Quill's toolbar by adding an option to insert special characters into user input. For instance, c̅ for with, ā for before and p̄ for after.
+  - [ ] Users can enter longer sentences (max 200 characters per sentence).
+  - [ ] Users can enter a paragraph (max 1000 characters).
+  - [ ] There's an unlimited number of characters a user can enter.
+  - [ ] Add an "About" section to the front end.
+  - [ ] Add a footer to the front end with a link to my GitHub repo.
+  - [ ] Add functionality to generate random sentences in the front end so that users can test/use the app right away.
+  - [ ] Users can copy the translated result with a click of a button.
+  - [ ] Users can add a new term via the front-end application for open contribution.
+  - [ ] Users can update existing terms via the front-end application.
+  - [ ] Warn users to be careful when translating real patient information to prevent violating their privacy (HIPAA).
+  - [ ] The API can translate the vice versa (from layman’s terms to nursing jargons).
+  - [ ] The API can translate live/real-time.
+  - [ ] Apply Swagger API for http routes documentation.
+  - [ ] Use Redux in case the application's scale of state gets very large.
 
 </details>
 
