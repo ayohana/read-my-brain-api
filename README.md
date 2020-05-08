@@ -144,7 +144,7 @@ Remove a tenant:
 * [MySQL](https://dev.mysql.com/downloads/file/?id=484919) (Windows OS)
 * [EF Core](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql)
 * [Postman](https://www.postman.com/downloads/)
-* [Azure](https://azure.microsoft.com/en-us/)
+* [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/)
 * [Draw.io](https://app.diagrams.net/)
 <!-- * [API Versioning](https://neelbhatt.com/2018/04/21/api-versioning-in-net-core/) -->
 
@@ -152,7 +152,9 @@ Remove a tenant:
 
 * [My Capstone Project Proposal](https://docs.google.com/document/d/1bxW7XzQk9xxoDU-CSc2oWtsvJcJJNuBybUBFhglaJDo/edit?usp=sharing)
 * [Tutorial: Build an ASP.NET Core and SQL Database app in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
-  * [Tenant API - Tested project for Azure Tutorial](https://github.com/ayohana/TenantAPI.git)
+  * [Tenant API: A successful Test Project for deploying SQL database and .NET app using Azure App Service](https://github.com/ayohana/TenantAPI.git)
+  * [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+  * [Install Azure CLI on Windows](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest#install-or-update)
 
 ## Contact and Support
 
