@@ -68,10 +68,10 @@ Users are primarily going to be **future health providers**, including nursing s
   <summary>Expand to see stretch goals!</summary>
 
   * Build a back-end API using C#/.NET Core and MySQL with full CRUD functionality.
-    * Create a new acronym and its abbreviation into the API's database.
+    * Create a new term and its abbreviation into the API's database.
     * Read a sentence by sending the sentence as a query parameter and the API will return the translated sentence.
-    * Update details of an acronym.
-    * Delete an acronym.
+    * Update details of an term.
+    * Delete an term.
   * Enable querying special characters.
   * Use Quill's basic text editor for application UI.
   * Apply Quill's toolbar.
@@ -83,11 +83,12 @@ Users are primarily going to be **future health providers**, including nursing s
   * Add a footer to the front end with a link to my GitHub repo.
   * Add functionality to generate random sentences in the front end so that users can test/use the app right away.
   * Users can copy the translated result with a click of a button.
-  * Users can add a new acronym via the front-end application for open contribution.
-  * Users can update existing acronyms via the front-end application.
+  * Users can add a new term via the front-end application for open contribution.
+  * Users can update existing terms via the front-end application.
   * Warn users to be careful when translating real patient information to prevent violating their privacy (HIPAA).
   * The API can translate the vice versa (from layman’s terms to nursing jargons).
   * The API can translate live/real-time.
+  * Apply Swagger API for http routes documentation.
   * Use Redux in case the application's scale of state gets very large.
 
 </details>
@@ -155,12 +156,12 @@ Remove a tenant:
 ## Resources
 
 * [My Capstone Project Proposal](https://docs.google.com/document/d/1bxW7XzQk9xxoDU-CSc2oWtsvJcJJNuBybUBFhglaJDo/edit?usp=sharing)
-* [Tutorial: Build an ASP.NET Core and SQL Database app in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
-  * [Tenant API: A successful Test Project for deploying SQL database and .NET app using Azure App Service](https://github.com/ayohana/TenantAPI.git)
+* [Tutorial: Build an ASP.NET Core and SQL Database app in Azure App Service on Windows](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
+  * [Tenant API](https://github.com/ayohana/TenantAPI.git) - a successful test project for deploying SQL database and .NET app using Azure App Service
   * [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-  * [Install Azure CLI on Windows](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest#install-or-update)
+  * [Azure CLI on Windows](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest#install-or-update)
 * [Tutorial: Building an API](https://www.learnhowtoprogram.com/c-and-net/building-an-api)
-* [.NET ICollection<T> Methods for Querying](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1?redirectedfrom=MSDN&view=netframework-4.8#methods)
+* [Queries in LINQ to Entities: Method-Based Query Syntax](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities#method-based-query-syntax)
 
 ## Contact and Support
 
