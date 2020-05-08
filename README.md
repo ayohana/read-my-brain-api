@@ -6,11 +6,9 @@
 
 #### By [**Adela Darmansyah**](https://github.com/ayohana/)
 
-[About](#About) | [What Brain?](##What-Brain?) | [Whose Brain?](#Whose-Brain?)
+[About](#About) | [What Brain](##What-Brain) | [Whose Brain](#Whose-Brain) | [Minimum Viable Product](#Minimum-Viable-Product) | [Future Product Roadmap](#Future-Product-Roadmap)
 
-[Minimum Viable Product](#Minimum-Viable-Product) | [Future Product Roadmap](#Future-Product-Roadmap)
-
-[Bugs](#Known-Bugs) | [Installation](#Installation-Instructions) | [Version History](#Version-History) | [Screenshots](#Screenshots)  | [Technologies](#Technologies) | [Contact and Support](#Contact-and-Support) | [License](#License)
+[Bugs](#Known-Bugs) | [Installation](#Installation-Instructions) | [Screenshots](#Screenshots)  | [Technologies](#Technologies) | [Resources](#Resources) | [Contact and Support](#Contact-and-Support) | [License](#License)
 
 ![GitHub](https://img.shields.io/github/license/ayohana/read-my-brain-api?color=%23DE98B2&style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ayohana/read-my-brain-api/master?color=%23DE98B2&style=for-the-badge) ![GitHub language count](https://img.shields.io/github/languages/count/ayohana/read-my-brain-api?color=%23DE98B2&style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/ayohana/read-my-brain-api?color=%23DE98B2&style=for-the-badge)
 
@@ -18,23 +16,27 @@
 
 ## About
 
-**A service API for Read My Brain, a web application for translating nursing brain jargons into readable text.**
+**A service API for Read My Brain, a web application for translating nursing brain jargons into simple, readable text.**
 
-## What Brain?
+## What Brain
 
 For this project, I will be referring to nursing 'brain' sheets--or in the nursing world, simply known as _brains_. So what are these brains? Nursing brains are report sheets that contain handwritten information (most often chicken scratch) to remember about their patients. In a typical shift change routine in a hospital, a nurse only has 20 minutes to receive verbal report from the previous nurse and write down everything they need to know about all five patients assigned to them. Details on their diagnosis, medical history, current symptoms, lab values, medication administration times, treatment schedule, discharge plan, their preference of filling up a water pitcher with three quarters ice and a quarter water with two straws are among many things nurses have to write down for each patient within a few minutes. Nurses and other healthcare providers have to start using a whole lot of acronyms to write things down efficiently. Here's an example:
 
 > `````
-> 84F DNR pt from ED is A&Ox2 c̅ Hx HTN, DM, RTKA and Ax pnc will need CXR STAT.
+> 84F DNR pt from ED is A&Ox2
+> c̅ Hx HTN, DM, RTKA & Ax pnc
+> will need CXR STAT.
 > `````
 
 **Read My Brain** will translate this into layman's terms:
 
 > `````
-> 84 year old female Do Not Resuscitate patient from Emergency Department is alert and oriented x2 with history of hypertension, diabetes mellitus, right total knee arthroplasty and allergy to penicillin will need chest x-ray immediately.
+> 84 year old female Do Not Resuscitate patient from Emergency Department is alert and oriented x2
+> with history of hypertension, diabetes mellitus, right total knee arthroplasty and allergy to penicillin
+> will need chest x-ray immediately.
 > `````
 
-## Whose Brain?
+## Whose Brain
 
 Users are primarily going to be **future health providers**, including nursing students and new nurses. Inspired by my own nursing experince, listed below are my **goals** for this project:
 1. To help future caregivers understand medical charts quicker, better, easier and make their learning less stressful.
@@ -110,10 +112,6 @@ _Coming up soon!_
     * Enter `dotnet run` to run the application.
     * Enter URL `http://localhost:5000/api/tenants` in Postman using one of the HTTP Methods [below](#HTTP-Methods-and-Routes). -->
 
-## Version History
-
-_Coming up soon!_
-
 ## Screenshots
 
 _Coming up soon!_
@@ -146,10 +144,15 @@ Remove a tenant:
 * [MySQL](https://dev.mysql.com/downloads/file/?id=484919) (Windows OS)
 * [EF Core](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql)
 * [Postman](https://www.postman.com/downloads/)
-* [Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
+* [Azure](https://azure.microsoft.com/en-us/)
 * [Draw.io](https://app.diagrams.net/)
 <!-- * [API Versioning](https://neelbhatt.com/2018/04/21/api-versioning-in-net-core/) -->
 
+## Resources
+
+* [My Capstone Project Proposal](https://docs.google.com/document/d/1bxW7XzQk9xxoDU-CSc2oWtsvJcJJNuBybUBFhglaJDo/edit?usp=sharing)
+* [Tutorial: Build an ASP.NET Core and SQL Database app in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
+  * [Tenant API - Tested project for Azure Tutorial](https://github.com/ayohana/TenantAPI.git)
 
 ## Contact and Support
 
