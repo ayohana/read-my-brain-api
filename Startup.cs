@@ -27,11 +27,11 @@ namespace ReadMyBrainAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // DEACTIVATE THE FOLLOWING CODE FOR LOCAL HOSTING ============================
+            // DEACTIVATE THE FOLLOWING CODE FOR LOCAL DEVELOPMENT ============================
             services.AddDbContext<ReadMyBrainAPIContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
 
-            // ACTIVATE THE FOLLOWING CODE FOR LOCAL HOSTING ==============================
+            // ACTIVATE THE FOLLOWING CODE FOR LOCAL DEVELOPMENT ==============================
             // services.AddDbContext<ReadMyBrainAPIContext>(opt =>
             //     opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
