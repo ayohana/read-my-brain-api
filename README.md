@@ -8,7 +8,7 @@
 
 [About](#About) | [What Brain](##What-Brain) | [Whose Brain](#Whose-Brain) | [Minimum Viable Product](#Minimum-Viable-Product) | [Future Product Roadmap](#Future-Product-Roadmap)
 
-[Bugs](#Known-Bugs) | [Installation](#Installation-Instructions) | [Screenshots](#Screenshots)  | [Technologies](#Technologies) | [Resources](#Resources) | [Contact and Support](#Contact-and-Support) | [License](#License)
+[Documentation](#Documentation) | [Bugs](#Known-Bugs) | [Installation Instructions](#Installation-Instructions) | [Screenshots](#Screenshots)  | [Technologies](#Technologies) | [Resources](#Resources) | [Contact and Support](#Contact-and-Support) | [License](#License)
 
 ![GitHub](https://img.shields.io/github/license/ayohana/read-my-brain-api?color=%23DE98B2&style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ayohana/read-my-brain-api/master?color=%23DE98B2&style=for-the-badge) ![GitHub language count](https://img.shields.io/github/languages/count/ayohana/read-my-brain-api?color=%23DE98B2&style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/ayohana/read-my-brain-api?color=%23DE98B2&style=for-the-badge)
 
@@ -16,7 +16,7 @@
 
 ## About
 
-**A service API for Read My Brain, a web application for translating nursing brain jargons into simple, readable text.**
+**A service API for Read My Brain, a web application for translating indecipherable nursing brain jargons into simple, readable text.**
 
 ## What Brain
 
@@ -72,7 +72,7 @@ Users are primarily going to be **future health providers**, including nursing s
       - [x] Delete an term.
   - [x] Enable querying special characters. For instance, c̅ for with, ā for before and p̄ for after.
   - [x] Deploy API's database via Azure.
-  - [ ] Deploy the back-end API via Azure.
+  - [x] Deploy the back-end API via Azure.
   - [ ] Deploy the front-end application via Firebase.
   - [ ] Use Quill's basic text editor for application UI.
   - [ ] Apply Quill's toolbar.
@@ -90,9 +90,24 @@ Users are primarily going to be **future health providers**, including nursing s
   - [ ] The API can translate the vice versa (from layman’s terms to nursing jargons).
   - [ ] The API can translate live/real-time.
   - [ ] Apply Swagger API or add Views to API for http routes documentation.
+  - [ ] Create an API key for users.
   - [ ] Use Redux in case the application's scale of state gets very large.
 
 </details>
+
+## Documentation
+
+Base URL: http://readmybrain.azurewebsites.net/api
+
+| Operations                        | Method | Route | `Raw JSON Body` |
+| :-------------------------------- | :----- | :---- | :-------- |
+| Retrieve a list of all terms      | GET    | | |
+| Retrieve a specific term by their ID | GET | `/{id}` | |
+| Create a new term                 | POST   | | `{ "name": "VS", "definition": "vitals" }` |
+| Update a term by their ID         | PUT    | `/{id}` | `{ "name": "VS", "definition": "Vital Signs" }` |
+| Translate my brain                | POST   | `/translate` |  
+| Delete a term by their ID         | DELETE | `/{id}` | `"84F DNR pt from ED is A&Ox2 c̅ Hx HTN, DM, RTKA & Ax pnc will need CXR STAT!"` |
+
 
 ## Known Bugs
 
@@ -100,21 +115,21 @@ No known bugs at this time.
 
 ## Installation Instructions
 
-_Coming up soon!_
-
-<!-- For local hosting with local database:
+### For local development:
 * Download [.NET Core](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-c-and-net) (Mac/Windows OS) - _FREE!_
 * Download [MySQL](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql) (Mac/Windows OS) - _FREE!_
 * Download [Postman](https://www.postman.com/downloads/) (Mac/Windows OS) - _FREE!_
 * Clone this [repository](https://github.com/ayohana/read-my-brain-api.git/)
-* Run the application.
-  * Navigate into the `read-my-brain-api` directory `$ cd Desktop/read-my-brain-api/`
-    * Open `Startup.cs` and activate the correct configuration block of code.
+* Run the application by:
+  * Entering `$ cd Desktop/read-my-brain-api/` to navigate into the `read-my-brain-api` directory 
+    * Open `Startup.cs` and activate the correct configuration block of code for local development.
     * Enter the command `dotnet restore` to gather tools and dependencies for the application.
     * Enter the command `dotnet build` to build the project using its dependencies.
-    * Enter the command `dotnet ef database update` to create a new, empty database. 
+    * Enter the command `dotnet ef database update` to create a new database with seeded data. 
     * Enter `dotnet run` to run the application.
-    * Enter URL `http://localhost:5000/api/tenants` in Postman using one of the HTTP Methods [below](#HTTP-Methods-and-Routes). -->
+    * Enter URL `http://localhost:5000/api/` in Postman using one of the HTTP Methods [below](#HTTP-Methods-and-Routes). 
+
+_Note: When running in Azure App Service, the connection string defined in Azure App Service takes precedence over the connection string defined in `appsettings.json`. For more details, click [here](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb#configure-connection-string)._
 
 ## Screenshots
 
@@ -154,7 +169,6 @@ Remove a tenant:
 * [Postman](https://www.postman.com/downloads/)
 * [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/)
 * [Draw.io](https://app.diagrams.net/)
-<!-- * [API Versioning](https://neelbhatt.com/2018/04/21/api-versioning-in-net-core/) -->
 
 ## Resources
 
