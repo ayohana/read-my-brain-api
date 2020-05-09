@@ -57,8 +57,6 @@ Users are primarily going to be **future health providers**, including nursing s
       - [ ] There will be a maximum number of 50 characters in a sentence.
       - [ ] Upon submission, the application will call the API to read the sentence.
       - [ ] The application will display the returned API response as a string.
-  - [ ] Deploy the back-end API via Azure.
-  - [ ] Deploy the front-end application via Firebase.
 
 </details>
 
@@ -73,6 +71,9 @@ Users are primarily going to be **future health providers**, including nursing s
       - [x] Update details of an term.
       - [x] Delete an term.
   - [x] Enable querying special characters. For instance, c̅ for with, ā for before and p̄ for after.
+  - [x] Deploy API's database via Azure.
+  - [ ] Deploy the back-end API via Azure.
+  - [ ] Deploy the front-end application via Firebase.
   - [ ] Use Quill's basic text editor for application UI.
   - [ ] Apply Quill's toolbar.
   - [ ] Modify Quill's toolbar by adding an option to insert special characters into user input. For instance, c̅ for with, ā for before and p̄ for after.
@@ -88,7 +89,7 @@ Users are primarily going to be **future health providers**, including nursing s
   - [ ] Warn users to be careful when translating real patient information to prevent violating their privacy (HIPAA).
   - [ ] The API can translate the vice versa (from layman’s terms to nursing jargons).
   - [ ] The API can translate live/real-time.
-  - [ ] Apply Swagger API for http routes documentation.
+  - [ ] Apply Swagger API or add Views to API for http routes documentation.
   - [ ] Use Redux in case the application's scale of state gets very large.
 
 </details>
@@ -101,12 +102,14 @@ No known bugs at this time.
 
 _Coming up soon!_
 
-<!-- * Download [.NET Core](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-c-and-net) (Mac/Windows OS) - _FREE!_
+<!-- For local hosting with local database:
+* Download [.NET Core](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-c-and-net) (Mac/Windows OS) - _FREE!_
 * Download [MySQL](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql) (Mac/Windows OS) - _FREE!_
 * Download [Postman](https://www.postman.com/downloads/) (Mac/Windows OS) - _FREE!_
 * Clone this [repository](https://github.com/ayohana/read-my-brain-api.git/)
 * Run the application.
   * Navigate into the `read-my-brain-api` directory `$ cd Desktop/read-my-brain-api/`
+    * Open `Startup.cs` and activate the correct configuration block of code.
     * Enter the command `dotnet restore` to gather tools and dependencies for the application.
     * Enter the command `dotnet build` to build the project using its dependencies.
     * Enter the command `dotnet ef database update` to create a new, empty database. 
