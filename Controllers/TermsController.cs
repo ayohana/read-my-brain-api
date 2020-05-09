@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -55,27 +56,38 @@ namespace ReadMyBrainAPI.Controllers
     [HttpPost("translate")]
     public ActionResult<string> Post([FromBody] string input)
     {
+      Regex searchSpecialCharsAtEnd = new Regex("[^a-zA-Z0-9c̅āp̄]+$");
+      Regex searchForNumbersAtStart = new Regex("^[0-9]+");
+      Regex searchForGenderAtEnd = new Regex("(M|F)$");
       string[] words = input.Split(" ");
       for (int i = 0; i < words.Length; i++) 
       {
         string wordToSearch = words[i];
+        string startSpecialChar = "";
         string endSpecialChar = "";
-        if (words[i].EndsWith(",")) 
+        Match endMatch = searchSpecialCharsAtEnd.Match(wordToSearch);
+        Match startMatch = searchForNumbersAtStart.Match(wordToSearch);
+        Match genderMatch = searchForGenderAtEnd.Match(wordToSearch);
+        if (endMatch.Success)
         {
-          endSpecialChar = ",";
-          wordToSearch = wordToSearch.Substring(0, wordToSearch.IndexOf(endSpecialChar));
-        } 
-        else if (words[i].EndsWith("."))
+          endSpecialChar = endMatch.Value;
+          wordToSearch = wordToSearch.Substring(0, endMatch.Index);
+        }
+        if (startMatch.Success)
         {
-          endSpecialChar = ".";
-          wordToSearch = wordToSearch.Substring(0, wordToSearch.IndexOf(endSpecialChar));
+          startSpecialChar = startMatch.Value;
+          wordToSearch = wordToSearch.Substring(startSpecialChar.Length);
+          if (genderMatch.Success)
+          {
+            startSpecialChar = startSpecialChar + " year(s) old ";
+          }
         }
         var query = _db.Terms.AsQueryable();
         query = query.Where(term => term.Name.Equals(wordToSearch));
         foreach (var term in query.ToList()) {
           if (term.Name == wordToSearch) 
           {
-            words[i] = term.Definition + endSpecialChar;
+            words[i] = startSpecialChar + term.Definition + endSpecialChar;
           }
         }
       }
