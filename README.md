@@ -2,7 +2,7 @@
 
 # [Read My Brain API](https://github.com/ayohana/read-my-brain-api.git/)
 
-#### API for [Read My Brain](https://github.com/ayohana/read-my-brain-api.git/), 05.08.2020
+#### API for [Read My Brain](https://github.com/ayohana/read-my-brain.git/), 05.08.2020
 
 #### By [**Adela Darmansyah**](https://github.com/ayohana/)
 
@@ -59,7 +59,7 @@ _Note: When running in Azure App Service, the connection string defined in Azure
 
 ![Read My Brain API's Database Structure created using Draw.io](./Images/read-my-brain-api-database-structure.png/)
 
-#### Translate text
+#### Translate my brain
 
 ![Post JSON string in Postman](./Images/translate-json-string.JPG/)
 
