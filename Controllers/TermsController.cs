@@ -56,7 +56,7 @@ namespace ReadMyBrainAPI.Controllers
     [HttpPost("translate")]
     public ActionResult<string> Post([FromBody] string input)
     {
-      Regex searchSpecialCharsAtEnd = new Regex("[^a-zA-Z0-9c̅āp̄]+$");
+      Regex searchSpecialCharsAtEnd = new Regex("[^a-zA-Z0-9c̅āp̄↑↓]+$");
       Regex searchForNumbersAtStart = new Regex("^[0-9]+");
       Regex searchForGenderAtEnd = new Regex("(M|F)$");
       string[] words = input.Split(" ");
